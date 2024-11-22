@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.agent-visualizer {
+  background-color: white;
+  height: 100%;  /* Ensure it takes the full height of the parent container */
+  width: 100%;   /* Ensure the width of the container is 100% */
+  gap: 24px;      /* Optional: add some space between the bars */
+  display: flex;
+  flex-direction: row;  /* Align the bars horizontally */
+  justify-content: center;  /* Distribute bars evenly */
+  align-items: center;  /* Align the bars at the bottom of the container */
+}
+
+
+/* Default styles for the bars */
+.agent-visualizer span {
+  width: 72px; /* Set the width of each bar */
+  border: 1px solid; /* Set the border color of the bars */
+  border-radius: 10px; /* Set the border radius of the bars */
+  background-color: black; /* Set the background color of the bars */
+  margin: 2px 0; /* Optional: space out the bars */
+}
+
+/* Styles when the bar is highlighted */
+.agent-visualizer span[data-lk-highlighted="true"] {
+  background-color: white; /* Change the background color when highlighted */
+}
+
+
+.lk-agent-control-bar {
+  @apply h-12 w-12 cursor-pointer mr-2 rounded-2xl flex flex-row justify-center items-center hover:bg-[#6b221a] hover:text-white bg-[white] border-[#6b221a];
+}
+
+.lk-disconnect-button {
+  @apply h-12 w-12 cursor-pointer rounded-2xl flex flex-row justify-center items-center hover:bg-[#6b221a] hover:text-white bg-[red] border-[#6b221a];
+}
